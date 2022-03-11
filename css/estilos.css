@@ -1,0 +1,583 @@
+    @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+    :root {
+    --dark-color: #191919;
+    --white-color: #ffffff;
+    --purple-color: rgba(117, 41, 149, 0.507);
+    --purple1-color: rgb(117, 41, 149);
+    --blue-color: #00b2b1;
+    --bluelight-color: #6fcece;
+    --gray-color: #828282;
+    --ligh-color: #f3f3f3;
+    }
+    /*Estos colores harian parte de nuestro foundationde colore 
+        s para nuestra pagina, el morado se maneja en rgb para poder hacr uso de la transparecia */
+
+    * {
+    box-sizing: border-box;
+    }
+    /* Esta propiedad es para evitar desbordamientos en la cajas al aplicar caracteristicas de espaciado como padding y margin*/
+
+    body {
+    font-family: "Lato", sans-serif;
+    font-size: 60px;
+    }
+    /*Definimos el tamañoo y la fuente de los textos del cuerpo de nuestra pagina */
+
+    h1,
+    h2,
+    h3 {
+    font-family: "Lato", sans-serif;
+    color: var(--purple-color);
+    }
+    /*Definir las fuentes de nnuestros textos genéricos y que vayaamos a utilizar en las diferentes seecciones de nuestra pagina*/
+    p {
+    color: var(--dark-color);
+    text-align: justify;
+    }
+
+    /*>Estilos Home<*/
+
+    header {
+    display: flex; /*Para convertirlo en propiedad flexbox*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /*Elemento separador interno Para darle un aire interno a la caja*/
+    }
+
+    .logo {
+    display: flex;
+    }
+
+    .logo img {
+    max-width: 1000px; /*Con esta propiedad definimos el tamaño maximo en este caso del hancho de la imagen y que no excesa sa medida*/
+    width: 900px;
+    height: 100%;
+    }
+
+    .b-azul {
+    background: linear-gradient(
+        #00b2b1,
+        #016e6e
+    ); /*Este elemento y propiedad nos sirve para dar el efecto de */
+    background-color: var(--blue-color);
+    border-radius: 5px;
+    border-color: var(--blue-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* Para dar medidas eztandarizadas a los botones (Arriba y abajo   Izquierda y derecha):son medidas mas dinamicas utilizadas en la actialidad 1 rem =16px y nos ayuda a dar formato de manera uniforme*/
+    cursor: pointer;
+    }
+
+    .b-azul:hover {
+    background: linear-gradient(
+        #016e6e,
+        #00b2b1
+    ); /* la gradiente de color lineal Nos sirve para dar degradé dinamico al boton al pararse encima*/
+    transition: all 1s ease 1s; /*  propiedad que uno desea afectar,Duracion  ,elefecto que tiene al hacer el efecto hover , tiempo de respuesta de la transicion */
+    }
+
+    .b-morado {
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--purple-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer; /*Permite cambiar el cursor al pararse en el boton por una mano seleccionadora*/
+    color: var(--purple-color);
+    }
+
+    .b-morado:hover {
+    background-color: var(--purple-color);
+    color: var(--white-color);
+    }
+
+    nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--purple-color);
+    }
+
+    .item {
+    padding: 1rem;
+    color: var(--white-color);
+    text-decoration: none; /*Para quitarle la linea que por defecto aparece debajo de los textos en los link o hipervinculos*/
+    }
+
+    .item:hover {
+    color: rgb(255, 255, 255, 0.4);
+    transition: transform;
+    /*Aveces se una el elemento Border-bottom: (x)px solid var(--); para parle al boton una mini barra en la ubicacion que se quiera para dar referencia al hover, es uno de tantos estilos de boton quicleable */
+    }
+
+    #agenda {
+    display: flex;
+    margin-top: 0.2rem;
+    height: 50rem;
+    }
+
+    .cita {
+    flex-basis: 70%; /*Permite utilizar una medida relativa y lograr distribuir la longitud de nuestros elementos dentro de un contenedor flexible( Dependiendo la cantidad de elementos que tengamos debemos distribuir los tamaños de lostextos en nuestros articles por porcentajes de tal manera que el total de porcentajes sumados den un total de 100%no puede pasarse de esta medida al sumar los porcentajes de los textos de cada article contenido en el section) para que quede al tamaño que viene  desde mi diseño*/
+    background-image: url(../img/fondo.jpg); /*url(../ugcgjcv.jpg) para entrar a una carpeta */
+    padding: 2rem;
+    }
+
+    .cita h1 {
+    color: var(--dark-color);
+    font-size: 30px;
+    text-transform: uppercase;
+    }
+
+    .cita h3 {
+    color: var(--dark-color);
+    font-size: 30px;
+    text-transform: uppercase; /*Para transformar el texto a mayusculas*/
+    font-weight: 600;
+    }
+
+    .promocion {
+    flex-basis: 30%;
+    background-color: var(--purple-color);
+    text-align: center;
+    padding: 2rem;
+    }
+
+    .promocion h1 {
+    color: var(--white-color);
+    font-size: 40px;
+    text-shadow: 2px 2px 2px var(--dark-color); /*Primera medida  indica la proyeccion horizontal de la sombra es de los lados como en el plano carteciano si se le coloca negativa, sale por la derecha al ser positiva y si se le coloca un numero negativo la sombra saldra or la izquierda, la segunda medida es la proyeccion vertical en esta medida es un plano cartesiano invertido ya que si es positiva sale por abajo y de ser negativa,, saldra popr arriba, la tercera medida me indica la proyeccion difuminada de esa sombra  */
+    }
+
+    .promocion img {
+    border-radius: 50%; /*Para darle circularidad a la imagen */
+    border: 7px solid var(--white-color);
+    width: 35rem;
+    }
+
+    .tseccion {
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 4px 4px 7px var(--dark-color);
+    font-size: 32 px;
+    }
+
+    #servicios {
+    display: flex; /*Este es mi contenerdor flexible, el  seccion o padre que contiene a los articles*/
+    justify-content: space-between;
+    }
+
+    .servicio {
+    margin: 10px;
+    text-align: center;
+    padding: 1rem;
+    }
+
+    .servicio img {
+    max-width: 400px;
+    width: 100%;
+    }
+
+    footer {
+    background-image: url("../img/fondo.jpg");
+    }
+    /*Las etiquetas de html se traen solo con el nombre */
+
+    .box-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    background-color: rgba(117, 41, 149, 0.37);
+    margin: auto;
+    height: 100%;
+    }
+
+    .foot {
+    justify-content: center;
+    text-align: center;
+    }
+
+    .foot h3 {
+    color: var(--white-color);
+    }
+
+    .foot p {
+    color: var(--white-color);
+    }
+
+    /* Estilos Equipo*/
+
+    #medicos {
+    display: flex; /*Este es mi contenerdor flexible, el  seccion o padre que contiene a los articles*/
+    justify-content: space-between;
+    }
+
+    .medico {
+    margin: 10px;
+    text-align: center;
+    padding: 1rem;
+    }
+
+    .medico img {
+    max-width: 500px;
+    width: 300rem;
+    border-radius: 50%; /*Para darle circularidad a la imagen */
+    border: 7px solid var(--bluelight-color);
+    }
+
+    .medico h2 {
+    text-align: center;
+    }
+
+    .medico p {
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px var(--dark-color);
+    }
+
+    .bannerazul img {
+    width: 100%;
+    }
+
+    /*Estilos Servicios*/
+
+    #services {
+    display: flex;
+    flex-wrap: wrap; /* Esta propiedad nos permite colocar los elementos divididos en filas*/
+    justify-content: center;
+    }
+
+    .service {
+    display: flex;
+    width: 45%;
+    margin-right: 15px;
+    }
+
+    .img-service img {
+    margin-right: 1em;
+    width: 300px;
+    }
+
+    .text-service h3 {
+    color: var(--dark-color);
+    }
+    /*Estilos contacto */
+
+    #contactos {
+    display: flex;
+    flex-wrap: wrap; /* Esta propiedad nos permite colocar los elementos divididos en filas*/
+    justify-content: center;
+    align-items: center;
+    height: 80rem;
+    }
+
+    .form {
+    display: flex;
+    width: 35%;
+    height: 1090px;
+    border-radius: 50px;
+    font-size: 4rem;
+    background-color: var(--purple-color);
+    box-shadow: 5px 5px 5px var(--dark-color);
+    display: flex;
+    margin-left: 10px;
+    }
+
+    .form-login {
+    max-width: 30rem;
+    width: 100%;
+    box-shadow: 1px 1px 2px var(--purpledgd-color);
+    background-color: var(--purpledd-color);
+    padding: 100px 100px 100px 100px;
+    display: flex;
+    flex-direction: row;
+    }
+
+    .form-group {
+    margin: 50px;
+    }
+
+    .form-group1 {
+    border-radius: 50px;
+    margin: 30px;
+    }
+
+    .form-input {
+    border: 100px;
+    border-radius: 10px;
+    outline: none;
+    height: 150px;
+    }
+
+    .form-input1 {
+    border: 100px;
+    border-radius: 10px;
+    outline: none;
+    height: 570px;
+    width: 60rem;
+    }
+
+    .form-input1::placeholder {
+    font-size: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    }
+
+    .caja3 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 90px;
+    margin-left: 200px;
+    }
+
+    .boton-azul {
+    background: linear-gradient(#00b2b1, #016e6e);
+    background-color: var(--blue-color);
+    border-radius: 5px;
+    border-color: var(--blue-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 35rem;
+    height: 10rem;
+    }
+
+    .boton-azul:hover {
+    background: linear-gradient(#016e6e, #00b2b1);
+    transition: all 1s ease 1s;
+    }
+
+    .info-contacto {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    height: 20rem;
+    font-size: 4rem;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    align-items: center;
+    }
+
+    .img-contacto img {
+    margin-right: 1em;
+    width: 150px;
+    }
+
+    .text-contacto h3 {
+    color: var(--dark-color);
+    font-size: 3rem;
+    }
+
+    .text-contacto p {
+    font-size: 3rem;
+    }
+
+    /*Estilos dashboard*/
+
+    .sesion {
+    text-align: right;
+    color: var(--purple1-color);
+    display: flex;
+    align-items: center;
+    }
+    .sesion img {
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--purple1-color);
+    }
+    .sesion a {
+    color: var(--purple1-color);
+    }
+
+    #dashboard {
+    display: flex;
+    }
+
+    .menu1 {
+    flex-basis: 20%;
+    background-color: var(--dark-color);
+    height: 100vh; /*viewport height, altura de la ventana*/
+    }
+
+    .menu1 ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    }
+    .menu1 li {
+    font-family: "Roboto", sans-serif;
+    }
+
+    .menu1 a {
+    color: var(--ligh-color);
+    padding: 3rem;
+    display: block; /*se usa para decirle   un elemento que va a ser utilizado como bloque */
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    }
+
+    .menu1 a:hover {
+    background-color: var(--purple-color);
+    color: var(--white-color);
+    border: 3px solid var(--white-color);
+    padding-left: 5px;
+    transition: all 1s;
+    text-decoration: none;
+    width: 60rem;
+    }
+
+    .menu1 i {
+    margin: 15px;
+    }
+
+    .item1 {
+    }
+
+    .contenido {
+    flex-basis: 80%;
+    background-color: var(--ligh-color);
+    padding: 30;
+    }
+
+    /*Estilos Producto*/
+
+    .producto {
+    margin: 30px;
+    }
+    .logo a {
+    text-decoration: none;
+    }
+
+    .tabla-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .tabla-intro img {
+    max-width: 300px;
+    border-radius: 50%;
+    border: 4px solid var(--purple1-color);
+    }
+
+    .tabla-intro h1 {
+    color: var(--dark-color);
+    font-family: "Roboto", sans-serif;
+    }
+    .tabla-intro a {
+    text-decoration: none;
+    border-radius: 10px;
+    border: 5px solid var(--purple1-color);
+    }
+    .frm-busqueda {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    }
+
+    .frm-busqueda input[type="text"] {
+    flex-basis: 80%;
+    padding: 10px;
+    border: 5px solid var(--gray-color);
+    border-radius: 10px;
+    }
+
+    .frm-busqueda button {
+    flex-basis: 20%;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 5px solid var(--purple1-color);
+    }
+
+    .b-azulp {
+    background: linear-gradient(
+        #00b2b1,
+        #016e6e
+    ); /*Este elemento y propiedad nos sirve para dar el efecto de */
+    background-color: var(--blue-color);
+    border-radius: 10px;
+    border-color: var(--blue-color);
+    font-weight: bold;
+    cursor: pointer;
+    margin: 50px;
+    padding: 0.5rem 1rem; /* Para dar medidas eztandarizadas a los botones (Arriba y abajo   Izquierda y derecha):son medidas mas dinamicas utilizadas en la actialidad 1 rem =16px y nos ayuda a dar formato de manera uniforme*/
+    }
+
+    .b-azulp:hover {
+    background: linear-gradient(
+        #016e6e,
+        #00b2b1
+    ); /* la gradiente de color lineal Nos sirve para dar degradé dinamico al boton al pararse encima*/
+    transition: all 1s ease 1s; /*  propiedad que uno desea afectar,Duracion  ,elefecto que tiene al hacer el efecto hover , tiempo de respuesta de la transicion */
+    }
+
+    table {
+    width: 100%;
+    border: 2px solid var(--dark-color);
+    border-collapse: collapse; /*Esta propiedsd sirve para que dos bordes de casilla diferente, se  combinen y quede uno solo*/
+    }
+
+    table th {
+    border: 2px solid var(--dark-color);
+    background-color: var(--purple1-color);
+    color: var(--white-color);
+    padding: 7px 0;
+    }
+
+    table td {
+    border: 2px solid var(--dark-color);
+    }
+
+    table img {
+    margin-left: 30px;
+    margin-top: 30px;
+    }
+
+    /*Estilos Producto Add*/
+
+    .form-product label{
+        color: var(--dark-color);
+    
+    }
+    .form-product select {
+        color: var(--dark-color);
+        font-size:3rem;
+        font-weight: bold;
+        border: 9px solid var(--gray-color);
+    }
+
+    .form-product input{
+        border: 9px solid var(--gray-color);
+    
+    }
+
+    .form-product input[type="submit"]{
+        font-family: 'Roboto',sans-serif;
+        font-weight: bold;
+        font-size:4rem;
+        background-color: var(--purple1-color);
+        border: 9px solid var(--purple1-color);
+        border-radius: 0.9rem;
+        cursor: pointer
+    
+        
+    }
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 80px;
+        
+    
+    }
+
+
+.form-group label{
+    font-weight: bold;
+    color: var(--purple1-color)
+    
+}
+
+/*Estilos tips*/
+
+
+

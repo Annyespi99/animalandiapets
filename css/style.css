@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Serif:wght@400;500;600&family=Roboto+Slab:wght@500&family=Shizuru&display=swap');
+
+:root{
+    --dark-color: #191919;
+    --blanco-color: #fff;
+    --purpledd-color: #a691bd;
+    --purpledgd-color: #8c169ecc;
+    --purple-color: #dbc4f3;
+    --gray-color: #aaa6a659;
+    --pink-color:#f6deea;
+    --blue-color:#00a8b4;
+
+}
+/*para crear seudoclases y se declara una variable oocando primero "--"*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color:var(--dark-color);  
+}
+
+p{
+    text-align: justify;
+}
+
+.userph{
+    max-width: 100px;
+    width: 100%;
+    max-height: 100px;
+    height: 100%;
+    align-items: center;
+    padding:0.8rem 1rem ;
+    
+}
+
+#login{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*viewport height= a la altura de la ventana*/
+
+}
+
+.form-login h1{
+    text-align: center;
+
+}
+
+.form-login{
+    margin-top: 5px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 1px 1px 2px var(--dark-color);
+    background-color: var(--gray-color);
+    border-radius:5px ;
+    padding: 10px 30px 20px 30px;
+    
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+
+}
+
+.form-label{
+    font-weight: bold;
+
+}
+
+.form-input{
+    border: 3px solid var(--purpledgd-color);
+    padding: 0.5rem;
+    outline: none;
+}
+
+.form-input::placeholder{
+    font-size: 0.8rem;
+}
+.btn-azul,.btn-morado{
+    padding: 0.5rem;
+    font-weight: 500;
+    border:none;
+    cursor:pointer;
+
+}
+
+.btn-morado{
+    background-color:var(--purpledgd-color) ;
+
+}
+
+.btn-azul{
+    background-color: var(--blue-color);
+
+}
+
+.form-olvido{
+    text-align: center;
+    color:var(--purpledgd-color)
+
+}
+/*Estilos tips*/
+
+#services{
+    background-image: url();
+}
